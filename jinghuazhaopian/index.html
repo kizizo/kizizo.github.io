@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="警花照片 - 展现人民警察队伍中女性成员英姿飒爽的专业形象。本站汇集各地公安机关优秀女警风采展示，包含制服规范、执勤瞬间及职业素养的视觉记录。">
+    <meta name="keywords" content="警花照片,女警风采,警察制服,女警执勤,警队形象">
+    <title>警花照片-人民警察女性风采展示与职业形象记录</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a5f7a; /* 警蓝 */
+            --secondary-color: #159895; /* 青色点缀 */
+            --accent-color: #d9534f; /* 警徽红 */
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-body: #f4f7f6;
+            --bg-white: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 8px 15px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d3b4e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Filter/Nav Bar */
+        .filter-bar {
+            background: var(--bg-white);
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+
+        .filter-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-btn {
+            background: #f0f0f0;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--text-dark);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Grid */
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            padding-top: 140%; /* 5:7 Aspect Ratio */
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .card-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px 15px 10px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card-tag {
+            background: var(--secondary-color);
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-desc {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #ddd;
+        }
+
+        .author-name {
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        .view-count {
+            font-size: 12px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Featured Section */
+        .featured-section {
+            margin: 50px 0;
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .featured-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+
+        .featured-text h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .featured-text p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: var(--text-dark);
+        }
+
+        .feature-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* Info Section */
+        .info-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 50px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .info-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .info-item p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 28px; }
+            .nav-links { display: none; } /* Simplified for mobile */
+            .featured-grid { grid-template-columns: 1fr; }
+            .featured-img { height: 250px; }
+            .info-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span>警花风采网</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#">首页</a>
+            <a href="#">制服展示</a>
+            <a href="#">执勤瞬间</a>
+            <a href="#">专题报道</a>
+            <a href="#">关于我们</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索照片或警种...">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-container">
+        <h1>警花照片</h1>
+        <p>记录人民警察队伍中女性成员的飒爽英姿与专业素养，展现新时代女警风采。</p>
+    </div>
+</section>
+
+<div class="filter-bar">
+    <div class="filter-container">
+        <button class="filter-btn active">全部</button>
+        <button class="filter-btn">特警女警</button>
+        <button class="filter-btn">交警执勤</button>
+        <button class="filter-btn">户籍窗口</button>
+        <button class="filter-btn">派出所民警</button>
+        <button class="filter-btn">消防员</button>
+        <button class="filter-btn">警犬训导员</button>
+        <button class="filter-btn">法医</button>
+    </div>
+</div>
+
+<main>
+    <div class="section-title">
+        <span>最新精选</span>
+        <a href="#" style="font-size: 14px; color: var(--primary-color);">查看更多 &rarr;</a>
+    </div>
+
+    <div class="gallery-grid">
+        <!-- Card 1 -->
+        <article class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/police1/400/560" alt="特警女警训练照片" class="card-img">
+                <div class="card-overlay">
+                    <span class="card-tag">特警</span>
+                    <h3 class="card-title">特警女警日常训练纪实</h3>
+                    <div class="card-meta">
+                        <span>👁 12.5k</span>
+                        <span>❤ 890</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="font-size: 16px;">特警女警日常训练纪实</h3>
+                <p class="card-desc">烈日下，特警女队员们正在进行战术体能训练，汗水湿透了制服，却磨不灭她们坚毅的眼神。</p>
+                <div class="card-footer">
+                    <div class="author">
+                        <img src="https://picsum.photos/seed/user1/50/50" alt="头像" class="author-avatar">
+                        <span class="author-name">警营摄影师</span>
+                    </div>
+                    <span class="view-count">2023-10-24</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/police2/400/560" alt="交警指挥交通照片" class="card-img">
+                <div class="card-overlay">
+                    <span class="card-tag">交警</span>
+                    <h3 class="card-title">城市交通的守护者</h3>
+                    <div class="card-meta">
+                        <span>👁 8.2k</span>
+                        <span>❤ 650</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="font-size: 16px;">城市交通的守护者</h3>
+                <p class="card-desc">在繁忙的十字路口，女交警标准的手势指挥着车流，成为了城市一道靓丽的风景线。</p>
+                <div class="card-footer">
+                    <div class="author">
+                        <img src="https://picsum.photos/seed/user2/50/50" alt="头像" class="author-avatar">
+                        <span class="author-name">平安卫士</span>
+                    </div>
+                    <span class="view-count">2023-10-23</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/police3/400/560" alt="派出所接待群众照片" class="card-img">
+                <div class="card-overlay">
+                    <span class="card-tag">派出所</span>
+                    <h3 class="card-title">社区警务的温暖瞬间</h3>
+                    <div class="card-meta">
+                        <span>👁 15k</span>
+                        <span>❤ 1.2k</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="font-size: 16px;">社区警务的温暖瞬间</h3>
+                <p class="card-desc">户籍窗口的女民警耐心地为群众办理业务，用微笑化解难题，传递警民鱼水情。</p>
+                <div class="card-footer">
+                    <div class="author">
+                        <img src="https://picsum.photos/seed/user3/50/50" alt="头像" class="author-avatar">
+                        <span class="author-name">社区民警小张</span>
+                    </div>
+                    <span class="view-count">2023-10-22</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/police4/400/560" alt="法医解剖照片" class="card-img">
+                <div class="card-overlay">
+                    <span class="card-tag">法医</span>
+                    <h3 class="card-title">用科学还原真相</h3>
+                    <div class="card-meta">
+                        <span>👁 6.5k</span>
+                        <span>❤ 420</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="font-size: 16px;">用科学还原真相</h3>
+                <p class="card-desc">法医女警官在实验室里专注地分析样本，她是生与死之间的摆渡人，用专业守护正义。</p>
+                <div class="card-footer">
+                    <div class="author">
+                        <img src="https://picsum.photos/seed/user4/50/50" alt="头像" class="author-avatar">
+                        <span class="author-name">法医日记</span>
+                    </div>
+                    <span class="view-count">2023-10-21</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/police5/400/560" alt="消防员出警照片" class="card-img">
+                <div class="card-overlay">
+                    <span class="card-tag">消防</span>
+                    <h3 class="card-title">逆行而上的最美背影</h3>
+                    <div class="card-meta">
+                        <span>👁 20k</span>
+                        <span>❤ 2.1k</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="font-size: 16px;">逆行而上的最美背影</h3>
+                <p class="card-desc">消防女队员迅速背起受困群众撤离火场，那一抹橙红在火光中显得格外耀眼。</p>
+                <div class="card-footer">
+                    <div class="author">
+                        <img src="https://picsum.photos/seed/user5/50/50" alt="头像" class="author-avatar">
+                        <span class="author-name">蓝焰记录</span>
+                    </div>
+                    <span class="view-count">2023-10-20</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card">
+            <div class="card-img-wrapper">
+                <img src="https://picsum.photos/seed/police6/400/560" alt="警犬训练照片" class="card-img">
+                <div class="card-overlay">
+                    <span class="card-tag">警犬</span>
+                    <h3 class="card-title">人犬共进退</h3>
+                    <div class="card-meta">
+                        <span>👁 9.8k</span>
+                        <span>❤ 780</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title" style="font-size: 16px;">人犬共进退</h3>
+                <p class="card-desc">警犬训导员与她的爱犬配合默契，在训练场上挥洒汗水，共同守护一方平安。</p>
+                <div class="card-footer">
+                    <div class="author">
+                        <img src="https://picsum.photos/seed/user6/50/50" alt="头像" class="author-avatar">
+                        <span class="author-name">萌警之家</span>
+                    </div>
+                    <span class="view-count">2023-10-19</span>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <div class="featured-section">
+        <div class="featured-grid">
+            <img src="https://picsum.photos/seed/police_hero/600/400" alt="特警女警方阵" class="featured-img">
+            <div class="featured-text">
+                <h2>英姿飒爽：展现新时代女警力量</h2>
+                <p>警花照片不仅仅是视觉的展示，更是对职业精神的致敬。在维护社会治安、服务人民群众的第一线，女性民警以其特有的细腻与坚韧，发挥着不可替代的作用。从繁华都市的街头巷尾到偏远乡村的田间地头，处处都有她们忙碌的身影。</p>
+                <ul class="feature-list">
+                    <li>专业规范的警容风纪展示</li>
+                    <li>多样化的警种工作场景记录</li>
+                    <li>体现警务人员的精神风貌与职业素养</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">
+        <span>栏目导航</span>
+    </div>
+
+    <div class="info-section">
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>👮‍♀️ 特警风采</h3>
+                <p>展示特警女队员的战术训练、武装巡逻及处突演练图片。</p>
+            </div>
+            <div class="info-item">
+                <h3>🚦 交警执勤</h3>
+                <p>记录交警在指挥交通、处理事故及服务群众中的感人瞬间。</p>
+            </div>
+            <div class="info-item">
+                <h3>📝 户籍窗口</h3>
+                <p>展现户籍民警耐心细致的工作态度和为民服务的形象。</p>
+            </div>
+            <div class="info-item">
+                <h3>🔍 刑侦技术</h3>
+                <p>揭秘法医、痕迹检验等技术岗位女警的专业工作场景。</p>
+            </div>
+            <div class="info-item">
+                <h3>🚒 消防救援</h3>
+                <p>记录消防女指战员在灭火救援及抢险救灾中的英勇表现。</p>
+            </div>
+            <div class="info-item">
+                <h3>🐕 警犬基地</h3>
+                <p>展示警犬训导员与工作犬的日常训练及生活互动。</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <h2>警花风采网</h2>
+            <p>致力于记录和展示人民警察队伍中女性成员的精彩瞬间。我们尊重每一位警务人员的辛勤付出，用镜头定格正义与奉献。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速导航</h4>
+            <ul>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">最新上传</a></li>
+                <li><a href="#">热门榜单</a></li>
+                <li><a href="#">投稿指南</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>警种分类</h4>
+            <ul>
+                <li><a href="#">公安</a></li>
+                <li><a href="#">交警</a></li>
+                <li><a href="#">特警</a></li>
+                <li><a href="#">消防</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系我们</h4>
+            <ul>
+                <li>投稿邮箱: contact@police-photos.com</li>
+                <li>合作咨询: 400-123-4567</li>
+                <li>工作时间: 周一至周五 9:00-18:00</li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2023 警花风采网 版权所有. 本站图片仅供展示，如有异议请联系删除。</p>
+    </div>
+</footer>
+
+</body>
+              </html>
