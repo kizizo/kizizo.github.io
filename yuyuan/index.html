@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="豫园 - 上海著名古典园林、历史名胜与民俗文化体验指南。提供豫园九曲桥、湖心亭、城隍庙游览攻略、周边美食推荐及旅游实用信息。">
+    <meta name="keywords" content="豫园, 上海豫园, 城隍庙, 九曲桥, 豫园旅游, 上海景点">
+    <title>豫园-上海古典园林与城隍庙文化旅游指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-red: #B22222;
+            --primary-gold: #D4AF37;
+            --dark-text: #333333;
+            --light-text: #666666;
+            --bg-color: #F9F7F2;
+            --white: #FFFFFF;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--dark-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background-color: var(--primary-red);
+            color: var(--white);
+            font-size: 0.85rem;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-red);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--primary-gold);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--dark-text);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-red);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-red);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--primary-red);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .cta-button:hover {
+            background-color: #8B0000;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+            filter: brightness(0.7);
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: var(--white);
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Content Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--primary-red);
+            padding-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--dark-text);
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-gold);
+        }
+
+        .section-link {
+            color: var(--primary-red);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Feature Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 200px;
+            width: 100%;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+
+        .card-desc {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        /* Attractions Detail */
+        .attraction-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+
+        .attraction-img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .attraction-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-red);
+        }
+
+        .attraction-info p {
+            margin-bottom: 1.5rem;
+            color: var(--light-text);
+            text-align: justify;
+        }
+
+        .checklist {
+            list-style: none;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .checklist li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        /* Food & Shopping */
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .food-item {
+            background: var(--white);
+            padding: 1rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            transition: all 0.3s;
+        }
+
+        .food-item:hover {
+            background-color: var(--primary-red);
+            color: var(--white);
+        }
+
+        .food-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        /* Guide/FAQ Section */
+        .guide-section {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 4rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--light-text);
+            display: none;
+            padding-left: 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 4rem 1rem 1rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                gap: 1rem;
+                font-size: 0.9rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .attraction-detail {
+                grid-template-columns: 1fr;
+            }
+
+            .attraction-img {
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        上海豫园旅游度假区官方推荐 · 体验老城厢文化 · 品味江南风情
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M9 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/><path d="M9 21v-5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v5"/></svg>
+                豫园<span>文化</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#attractions">园林景点</a></li>
+                    <li><a href="#culture">民俗文化</a></li>
+                    <li><a href="#food">美食购物</a></li>
+                    <li><a href="#guide">旅游攻略</a></li>
+                </ul>
+            </nav>
+            <a href="#tickets" class="cta-button">购票预约</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <img src="https://picsum.photos/seed/yuyuan_hero/1920/1080.jpg" alt="豫园全景" class="hero-bg">
+        <div class="hero-content">
+            <h1>豫园：明清江南古典园林</h1>
+            <div class="hero-tags">
+                <span class="tag">上海地标</span>
+                <span class="tag">世界文化遗产预备名单</span>
+                <span class="tag">城隍庙文化区</span>
+            </div>
+            <p>漫步于九曲桥畔，探访湖心亭，感受百年老城厢的历史韵味与江南水乡的独特风情。</p>
+            <a href="#attractions" class="cta-button" style="background: var(--white); color: var(--primary-red);">开始游览</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Key Attractions Section -->
+        <section id="attractions">
+            <div class="section-header">
+                <h2 class="section-title">核心景点</h2>
+                <a href="#" class="section-link">查看全景图 &rarr;</a>
+            </div>
+            
+            <div class="grid-3">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/jiugu/600/400.jpg" alt="九曲桥" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">九曲桥 & 湖心亭</h3>
+                        <p class="card-desc">豫园标志性地标，蜿蜒曲折的桥身寓意吉祥，湖心亭茶楼是上海最早的茶楼之一。</p>
+                        <div class="card-meta">
+                            <span>最佳观赏点</span>
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/wangyue/600/400.jpg" alt="玉玲珑" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">玉玲珑</h3>
+                        <p class="card-desc">江南三大名石之一，孔窍遍布，移步换景，被誉为“石中之王”。</p>
+                        <div class="card-meta">
+                            <span>镇园之宝</span>
+                            <span>⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="https://picsum.photos/seed/sixiyuan/600/400.jpg" alt="内园" class="card-img">
+                    <div class="card-body">
+                        <h3 class="card-title">内园</h3>
+                        <p class="card-desc">小巧精致，布局紧凑，集历代造园艺术之大成，是豫园的重要组成部分。</p>
+                        <div class="card-meta">
+                            <span>必游景点</span>
+                            <span>⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Detailed Intro Section -->
+        <section class="attraction-detail" id="culture">
+            <div class="attraction-img-wrapper">
+                <img src="https://picsum.photos/seed/yuyuan_history/800/600.jpg" alt="豫园历史建筑" class="attraction-img">
+            </div>
+            <div class="attraction-info">
+                <h3>豫园历史沿革</h3>
+                <p>豫园始建于明嘉靖、万历年间，是四川布政使潘允端为其父潘恩而建，取“豫悦老亲”之意，故名“豫园”。园内亭台楼阁、奇石秀水，历经四百余年沧桑，虽经多次兴废，依然保留着明清两代江南园林的建筑风格。</p>
+                <p>豫园不仅是古典园林艺术的瑰宝，更是上海城市记忆的重要载体。它见证了老上海的商业繁荣与市井文化，如今已成为连接传统与现代的文化窗口。</p>
+                
+                <ul class="checklist">
+                    <li>始建于1559年（明嘉靖三十八年）</li>
+                    <li>潘允端为“豫悦老亲”而建</li>
+                    <li>1997年被列入世界文化遗产预备名单</li>
+                    <li>周边连接城隍庙旅游区</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Food & Shopping Section -->
+        <section id="food">
+            <div class="section-header">
+                <h2 class="section-title">民俗与美食</h2>
+            </div>
+            
+            <p style="margin-bottom: 2rem; color: var(--light-text);">豫园不仅是园林，更是上海著名的商业街区和美食聚集地。这里有传统的上海小吃和精美的工艺品。</p>
+
+            <div class="food-grid">
+                <div class="food-item">
+                    <span class="food-icon">🥟</span>
+                    <h4>南翔小笼包</h4>
+                </div>
+                <div class="food-item">
+                    <span class="food-icon">🍡</span>
+                    <h4>五香豆</h4>
+                </div>
+                <div class="food-item">
+                    <span class="food-icon">🥢</span>
+                    <h4>梨膏糖</h4>
+                </div>
+                <div class="food-item">
+                    <span class="food-icon">🧵</span>
+                    <h4>上海绒绣</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Guide / FAQ -->
+        <section id="guide" class="guide-section">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2 class="section-title">游客指南</h2>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">豫园的开放时间是什么时候？需要门票吗？<span>+</span></div>
+                <div class="faq-answer">
+                    <p>豫园景区（含内园）通常开放时间为早上8:30至下午5:00（16:30停止入场）。门票价格根据季节和政策会有所调整，建议出行前通过官方渠道查询最新票价及预约信息。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">去豫园交通方便吗？<span>+</span></div>
+                <div class="faq-answer">
+                    <p>豫园位于上海市黄浦区，交通非常便利。地铁10号线豫园站直达，多条公交线路（如11路、64路、145路等）也可到达。周边停车资源较为紧张，建议优先选择公共交通出行。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">最佳游览季节是什么时候？<span>+</span></div>
+                <div class="faq-answer">
+                    <p>春季和秋季是游览豫园的最佳时节。春季百花盛开，秋季天高气爽。此外，春节期间豫园会举办灯会，是体验传统民俗文化的绝佳时机。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section style="text-align: center; margin-bottom: 4rem;">
+            <div style="background: linear-gradient(135deg, #B22222 0%, #8B0000 100%); color: white; padding: 3rem; border-radius: 12px;">
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">准备好探索豫园了吗？</h2>
+                <p style="margin-bottom: 2rem; opacity: 0.9;">带上家人朋友，来一场穿越时空的江南之旅。</p>
+                <a href="#" class="cta-button" style="background: white; color: var(--primary-red);">立即预订门票</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于豫园</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    豫园是上海著名的古典园林，也是国家AAAA级旅游景区。我们致力于保护和传承江南园林文化，为游客提供优质的游览体验。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">景区简介</a></li>
+                    <li><a href="#">景点介绍</a></li>
+                    <li><a href="#">票务信息</a></li>
+                    <li><a href="#">交通指南</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>地址：上海市黄浦区安仁街137号</li>
+                    <li>电话：021-6328-3888</li>
+                    <li>邮箱：info@yuyuan.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 豫园文化旅游指南. All Rights Reserved. 本页面为设计展示用途，非官方站点。</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
