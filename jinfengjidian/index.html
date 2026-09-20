@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金丰机电姚宏昌-专业电机维修改造与解决方案服务商</title>
+    <meta name="description" content="金丰机电姚宏昌致力于为工业用户提供高效、可靠的电机维修、绕线改造及技术咨询。拥有丰富经验，提供定制化电气设备维护服务。">
+    <meta name="keywords" content="金丰机电, 姚宏昌, 电机维修, 电机绕线, 电机改造, 工业电气">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8e8;
+            --accent-color: #f39c12;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .cta-button:hover {
+            background: #004494;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* About Section */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        .about-img {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            background: #ddd;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Process */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: var(--border-color);
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .step h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: var(--white);
+        }
+
+        .faq-question:hover {
+            background: #fcfcfc;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-light);
+            background: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 1.2rem;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Contact */
+        .contact-section {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 4rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-icon {
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+
+        .info-content h5 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-content p {
+            color: #aaa;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            color: var(--text-dark);
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #888;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-grid, .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .step {
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                    <line x1="12" y1="2" x2="12" y2="12"></line>
+                </svg>
+                <span>金丰机电</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about" class="active">关于我们</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#process">服务流程</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#contact" class="cta-button">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>金丰机电姚宏昌<br>专注电机维修与电气改造</h1>
+            <p>提供专业、高效、可靠的工业电机维修、绕线改造及技术咨询。解决各类电机故障难题，保障生产线稳定运行。</p>
+            <div class="hero-tags">
+                <span class="tag">三相异步电机</span>
+                <span class="tag">直流电机维修</span>
+                <span class="tag">特种电机改造</span>
+                <span class="tag">高压电机维修</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于金丰机电</h2>
+                <p>专业工业电机维修与技术服务团队</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>深耕行业，技术精湛</h3>
+                    <p>金丰机电（姚宏昌）是一家专注于工业电气设备维修与改造的专业服务机构。我们致力于为机械制造、纺织、化工、电力等多个行业提供高质量的电机维修解决方案。</p>
+                    <p>凭借丰富的实战经验和专业的技术团队，我们能够针对各类进口及国产电机进行精准诊断与高效维修。无论是常规的绕组更换，还是复杂的变频改造，我们都能提供定制化服务，帮助企业降低设备停机成本，延长设备使用寿命。</p>
+                    <p>我们始终坚持以质量求生存，以信誉求发展，为客户提供从故障排查、维修到保养的一站式服务。</p>
+                </div>
+                <div class="about-img">
+                    <!-- 使用 picsum 作为占位图，种子确保每次刷新图片一致 -->
+                    <img src="https://picsum.photos/seed/industry/600/400" alt="金丰机电车间环境" width="600" height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心服务项目</h2>
+                <p>全方位的电机维修与电气解决方案</p>
+            </div>
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>电机维修</h3>
+                    <p>专业修复各类故障电机，包括绕组烧毁、轴承损坏、绝缘老化、转子不平衡等问题，恢复电机性能。</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>电机绕线</h3>
+                    <p>手工绕线与自动化绕线相结合，提供高精度的线圈绕制服务，确保绝缘强度和电气性能达标。</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>电机改造</h3>
+                    <p>根据客户需求将旧电机改造为变频电机、调速电机或特种电机，提升设备能效与控制精度。</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>设备维护</h3>
+                    <p>提供定期巡检、保养计划及预防性维护服务，预防故障发生，保障生产安全。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>服务流程</h2>
+                <p>标准化的维修流程，确保服务品质</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>故障诊断</h4>
+                    <p>现场检测，分析电机故障原因及损坏程度。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>方案报价</h4>
+                    <p>制定维修方案，提供透明合理的报价。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>维修实施</h4>
+                    <p>专业团队进行拆解、绕线、装配及调试。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>交付验收</h4>
+                    <p>试运行测试，客户验收合格后交付使用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题</h2>
+                <p>关于电机维修的疑问解答</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">电机维修需要多长时间？</div>
+                    <div class="faq-answer">
+                        <p>维修时间取决于故障的复杂程度。常规小修通常需要1-3天，复杂的大修或绕线改造可能需要3-7天。我们会根据实际情况给出准确工期。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">你们维修过的电机有保修期吗？</div>
+                    <div class="faq-answer">
+                        <p>是的，我们提供合理的保修期。常规维修通常提供3-6个月的保修服务，保修期内因维修质量问题导致的故障，我们提供免费返修。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">可以提供上门服务吗？</div>
+                    <div class="faq-answer">
+                        <p>对于大型设备或紧急故障，我们提供专业的上门检测与维修服务。具体行程需根据距离和工程师排期协商确定。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>联系金丰机电</h3>
+                    <p style="margin-bottom: 2rem; color: #ccc;">无论您遇到什么电机故障，或需要技术咨询，欢迎随时联系我们。我们期待为您提供专业的解决方案。</p>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h5>公司地址</h5>
+                            <p>中国某省某市工业园区XX号</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h5>联系电话</h5>
+                            <p>0XXX-XXXXXXX</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h5>电子邮箱</h5>
+                            <p>service@jinfeng-electric.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言！我们会尽快与您联系。');">
+                        <div class="form-group">
+                            <label for="name">您的姓名</label>
+                            <input type="text" id="name" placeholder="请输入姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话</label>
+                            <input type="tel" id="phone" placeholder="请输入联系电话" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service-type">服务类型</label>
+                            <select id="service-type">
+                                <option>电机维修咨询</option>
+                                <option>电机绕线改造</option>
+                                <option>设备维护保养</option>
+                                <option>其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">需求描述</label>
+                            <textarea id="message" rows="4" placeholder="请简要描述故障情况或需求..."></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="width: 100%;">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 金丰机电姚宏昌. 保留所有权利. </p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(child => {
+                    child.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
